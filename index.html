@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function greeting() {
+        let name = prompt('pls Input ur name : ');
+        window.alert('Hello '+ name);
+        document.getElementById('demo').innerHTML = 'Hello '+name ;
+    }
+    function changeTored() {
+        document.getElementById('demo').style.color = "red";
+        document.getElementById('demo').style.fontSize = "30px";
+    }
+    function changetodog() {
+        document.getElementById('pic').src = 'dog.jpg' ;
+    }
+    function changetocat() {
+        document.getElementById('pic').src = 'cat.png' ;
+    }
+
+</script>
+</head>
+<body>
+    <h2>My First JavaScript</h2>
+    <img id = "pic" src = "cat.png"><br>
+
+    <button type="button"
+    onclick="greeting()">
+    Click me to greeting.</button>
+    <button type="button"
+    onclick="changeTored()">
+    Click to change the color of text.</button>
+    <button type="button"
+    onclick="changetodog()">
+    Click to change to Dog.</button>
+    <button type="button"
+    onclick="changetocat()">
+    Click to change to Cat.</button>
+
+
+
+    <p id="demo"></p>
+                                                                        
+</body>
+</html>
