@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button type="button" onclick="showProduct(products)">Click me to Show Product</button>
+    <p id="demo"></p>
+    <script>
+        const products = [
+            {
+                id: "1",
+                name: "นมพาสเจอร์ไรส์เมจิ",
+                price: "89 Baht",
+                img: "img/1.jpg"
+            },
+            {
+                id: '2',
+                name: "นมโฟร์โมสต์",
+                price: "12 Baht",
+                img: "img/2.jpg"
+            },
+            {
+                id: '3',
+                name: "นมหนองโพ",
+                price: '13 Baht',
+                img: "img/3.jpg"
+            },
+            {
+                id: '4',
+                name: "นมไทยเดนมาร์ค UHT",
+                price: '13 Baht',
+                img: "img/4.jpg"
+            },
+            {
+                id: '5',
+                name: "นมโรงเรียน",
+                price: '7 Baht',
+                img: "img/5.jpg"
+            },
+            {
+                id: '6',
+                name: "ดัชมิลล์ รสกาแฟ",
+                price: '13 Baht',
+                img: "img/6.jpg"
+            },
+            {
+                id: '7',
+                name: "นมหมีปั่นรสน้ำผึ้ง",
+                price: '12 Baht',
+                img: "img/7.jpg"
+            },
+            {
+                id: '8',
+                name: "ดัชมิลล์ นมเปรี้ยวรสผลไม้รวม",
+                price: '36 Baht',
+                img: "img/8.jpg"
+            },
+            {
+                id: '9',
+                name: "Dutch Delight",
+                price: '22 Baht',
+                img: "img/9.jpg"
+            },
+            {
+                id: '10',
+                name: "โอวัลติน ยูเอชทีเบส",
+                price: '12 Baht',
+                img: "img/10.jpg"
+            },
+        ]
+        let text = "<ul>";
+        let x = document.getElementById("demo")
+        products.forEach(showProduct);
+        text += "</ul>";
+        x.innerHTML = text;
+
+        function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img}></li>`
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>
